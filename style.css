@@ -1,0 +1,85 @@
+:root {
+    box-sizing: border-box;
+
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+    
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--white);
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey-900);
+    padding: 2rem; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--grey-800);
+    padding: clamp(2rem, calc(1rem + 3vw), 3rem); /*clamp(2rem, 1rem + 1vw, 3rem); */
+    width: 100%;
+    max-width: 25rem;
+    border-radius: 1rem;
+}
+.jessica-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+}
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+h2 {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+}
+h3 {
+    font-size: 12px;
+}
+button {
+    width: 100%;
+    background-color: var(--grey-700);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 600;
+}
+button:hover, button:focus {
+    background-color: var(--green);
+    color: var(--grey-800);
+    cursor: url('./assets/images/icons8-hand-cursor.svg'), pointer;
+    outline: none;
+}
+.attribution {
+    margin-top: 2rem;
+    font-size: 8px;
+}
+
+/* @media only screen and (min-width: 750px) {
+    body {
+        justify-content: center;
+    }
+} */
